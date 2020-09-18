@@ -34,6 +34,7 @@ body {
   grid-template-areas:
   "masthead masthead"
   "main main";
+  row-gap: 1rem;
   /*
   this is where you use display: grid and set up your columns.
   Use grid-template-area to achieve the layout
@@ -50,21 +51,9 @@ body {
   grid-column: 1;
   grid-row: 1;
   align-self: flex-end;
+  width: 14rem;
+  margin: 1rem;
 }
-/*
-.pano {
-use this area to place the banner into the grid using grid-template-column
-(the CSS that moves our cells around where we want them) as well as difining
-a grid-area spot (names must match those set up in grid-template-areas).
-stretch it across both top columns using grid-column.
-}
-
-
-.logo {
-use this area to place the logo into the correct column and row and pull it
-out of its own cell so that it is overlaid on the .pano
-}
-*/
 
 nav {
   grid-column: 2;
@@ -75,7 +64,7 @@ ul {
   list-style-type: none;
   margin: 0;
   padding-top: 1rem;
-  padding-left: 1rem;
+  padding-left: 12rem;
   font-size: 2rem;
   display: flex;
 }
@@ -85,10 +74,10 @@ li a {
   padding: 1rem;
 
 }
-
+s
 h2 {
   color: #30658d;
-margin-bottom: 0;
+  margin-bottom: 0;
 }
 
 p {
@@ -97,18 +86,20 @@ p {
   margin-top: 0;
 }
 
-
 h1 {
   grid-row: 2;
   grid-column: 1;
 }
 
-main {
-  display: grid;
-  grid-template-columns: repeat(2, 1fr);
-  column-gap: 1rem;
-}
-
 figure {
   margin: 0;
+}
+
+figure:first-child {
+  grid-area: sidebar;
+}
+
+figure:last-child {
+  grid-column: 2;
+  grid-row: 2;
 }
