@@ -34,11 +34,11 @@ body {
     "banner main";
   column-gap: 1rem;
   row-gap: 1rem;
+  grid-template-columns: repeat(2, 1fr);
 }
 
 main {
   display: contents;
-  grid-template-columns: repeat(2, 1fr);
 }
 
 .pano {
@@ -65,8 +65,7 @@ nav {
 ul {
   list-style-type: none;
   margin: 0;
-  padding-top: 1rem;
-  padding-left: 12rem;
+  padding: 0;
   font-size: 2rem;
   display: flex;
 }
